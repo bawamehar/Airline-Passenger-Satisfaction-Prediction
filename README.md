@@ -117,6 +117,14 @@ The notebook includes complete answers + visualizations for:
 
 ---
 
+## 📊 Summary
+
+The corelation heatmap clearly shows that personal traveller and class:eco columns are negatively related to Leg room service, Seat comfort and flight distance. This makes sense because economy passengers typically experience smaller seat space and less legroom. Moreover, Personal travelers tend to be more emotionally sensitive to these limitations as they Pay out-of-pocket and therefore have higher expectations for value. Their travel is often leisure-related, so discomfort has a stronger impact on perceived satisfaction.
+
+All these reasons are enough for both "Type of travel" and "Class Eco" features show strong negative correlations with the Satisfaction column. They represent groups that experience lower comfort and higher emotional sensitivity, making them more likely to report dissatisfaction.
+
+---
+
 ## 🧪 Technologies Used
 
 - Python  
@@ -126,43 +134,6 @@ The notebook includes complete answers + visualizations for:
 - Seaborn  
 - Scikit‑Learn  
 - XGBoost  
-
----
-
-## 📂 File Structure
-
-```
-Airline Satisfaction.ipynb
-README.md  ← This file
-```
-
----
-
-## ▶️ How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Launch the notebook:
-   ```bash
-   jupyter notebook "Airline Satisfaction.ipynb"
-   ```
-
----
-
-## 🧭 Future Improvements
-
-- Tune AdaBoost and Gradient Boosting with GridSearch/RandomSearch
-- Add LightGBM / CatBoost models
-- Build a dashboard using Streamlit/Plotly Dash
-- Deploy the final model as an API
 
 ---
 
