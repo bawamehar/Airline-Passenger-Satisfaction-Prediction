@@ -51,7 +51,7 @@ These help identify which service metrics align strongly with satisfaction.
 
 ## 🔧 Feature Engineering
 
-- **Label Encoding** for categorical variables  
+- **Label Encoding** & **One-Hot Encoding** for categorical variables  
 - **StandardScaler** applied to numerical features  
 
 📌 **Important Finding:**  
@@ -88,7 +88,7 @@ Two rounds were performed:
 2. **Cross‑validation with limited hyperparameters** → more stable performance  
 
 ### ⭐ **Best Model**
-**AdaBoost** achieved the highest performance in cross‑validation and was selected as the best model.
+**AdaBoost** achieved the best performance overall in cross‑validation and was selected as the best model.
 
 A **feature importance bar chart** was generated for the final model.
 
