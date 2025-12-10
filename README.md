@@ -1,6 +1,15 @@
 # Airline Passenger Satisfaction Analysis
 
-This repository contains a complete end‑to‑end analysis and prediction project using the **Airline Passenger Satisfaction** dataset. The goal is to explore what drives customer satisfaction and build machine‑learning models to predict whether a passenger is satisfied.
+This repository contains two complete end‑to‑end projects on the Airline
+Passenger Satisfaction dataset:\
+1. A **Python (Jupyter Notebook) project** performing full EDA,
+modeling, and boosting-based ML experiments.\
+2. A **KNIME Analytics Platform project** developed for coursework,
+following a structured data‑mining workflow and restricted to
+non‑boosting models.
+
+Both projects explore what drives customer satisfaction and build
+predictive models to classify whether a passenger is satisfied.
 
 ---
 
@@ -10,16 +19,20 @@ This project includes:
 
 - Data cleaning & manipulation  
 - Exploratory data analysis (EDA)  
-- Visualization of key satisfaction factors  
+- Visualization of key satisfaction factors [using Python]
 - Correlation analysis  
 - Feature encoding and scaling  
 - Multiple ML models and performance comparison  
-- Cross‑validation (regular + limited‑hyperparameter CV to address overfitting)  
-- Feature importance interpretation  
+- Cross‑validation (regular + limited‑hyperparameter CV to address overfitting) [using Pyton]  
+- Feature importance interpretation [using Pyton] 
 
 ---
 
 ## 📁 Notebook Workflow
+
+---
+
+## 1️⃣ Python (Jupyter Notebook) Project
 
 ### **1. Data Manipulation**
 - Managed missing values
@@ -47,9 +60,7 @@ A correlation heatmap highlights relationships between numerical features such a
 
 These help identify which service metrics align strongly with satisfaction.
 
----
-
-## 🔧 Feature Engineering
+### **4. Feature Engineering**
 
 - **Label Encoding** & **One-Hot Encoding** for categorical variables  
 - **StandardScaler** applied to numerical features  
@@ -57,9 +68,7 @@ These help identify which service metrics align strongly with satisfaction.
 📌 **Important Finding:**  
 Logistic Regression performed **significantly better** after scaling → demonstrates the importance of normalization for linear models.
 
----
-
-## 🤖 Machine Learning Models
+### **5. Machine Learning Models**
 
 The following ML models were built and compared:
 
@@ -74,7 +83,7 @@ models = {
 }
 ```
 
-### **Model Evaluation**
+### **5. Model Evaluation**
 - Accuracy  
 - Precision  
 - Recall  
@@ -82,7 +91,7 @@ models = {
 - ROC‑AUC  
 - Confusion Matrices  
 
-### **Cross‑Validation**
+### **6. Cross‑Validation**
 Two rounds were performed:
 1. **Initial cross‑validation** → some models were overfitting  
 2. **Cross‑validation with limited hyperparameters** → more stable performance  
@@ -94,7 +103,35 @@ A **feature importance bar chart** was generated for the final model.
 
 ---
 
-## 📝 Business Questions Answered
+## 2️⃣ KNIME Analytics Platform Project
+
+*(Built for CIS 575 coursework --- boosting algorithms not allowed, so
+tree‑based and neural network models were emphasized.)*
+
+### **1. Data Preparation**
+
+-   Imported via CSV Reader\
+-   Removed invalid rows (e.g., 0 ratings where invalid)\
+-   Missing values imputed using Mode\
+-   One‑to‑Many (one‑hot) encoding for categorical variables\
+-   Numerical features normalized\
+-   Train/validation split using Partitioning nodes
+
+###  **2. Machine Learning Models (KNIME)**
+
+-   Logistic Regression (with/without normalization)\
+-   Decision Tree (standard + pruned using MDL pruning)\
+-   Random Forest\
+-   Neural Network (baseline + optimized MLP)
+
+### ⭐ **Best Model (KNIME)**
+
+**Random Forest** --- highest accuracy (95.76%) + excellent recall for
+dissatisfied passengers.
+
+---
+
+### 📝 Business Questions Answered
 
 The notebook includes complete answers + visualizations for:
 
@@ -109,11 +146,12 @@ The notebook includes complete answers + visualizations for:
 
 ## 📊 Key Insights
 
-- Service quality variables (Inflight Entertainment, Seat Comfort, On‑board Service) show strong correlation with satisfaction.
+- Service quality variables (Inflight Entertainment, Seat Comfort, Online Boarding, Inflight Wi‑Fi) show strong correlation with satisfaction.
 - Older passengers show distinct patterns in service expectations.
 - Scaling greatly improved Logistic Regression.
 - AdaBoost and Gradient Boosting consistently performed well.
 - Cross‑validation helped reduce overfitting and improved reliability.
+- Longer arrival & departure delays increase dissatisfaction probability.
 
 ---
 
@@ -133,7 +171,8 @@ All these reasons are enough for both "Type of travel" and "Class Eco" features 
 - Matplotlib  
 - Seaborn  
 - Scikit‑Learn  
-- XGBoost  
+- XGBoost
+- KNIME Analytics Platform  
 
 ---
 
