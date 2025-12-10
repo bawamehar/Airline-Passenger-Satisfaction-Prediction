@@ -30,8 +30,6 @@ This project includes:
 
 ## 📁 Notebook Workflow
 
----
-
 ## 1️⃣ Python (Jupyter Notebook) Project
 
 ### **1. Data Manipulation**
